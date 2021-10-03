@@ -1,0 +1,6 @@
+{
+  "extends": ["standard"],
+  "globals": {
+    "AbortController": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "sse_chat",
+  "description": "",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=16.x"
+  },
+  "scripts": {
+    "format": "prettier-standard",
+    "lint": "prettier-standard --check --lint && tsc",
+    "start": "node src/bin/server.js",
+    "start:dev": "nodemon --inspect=0.0.0.0:9229 src/bin/server.js",
+    "test": "tape 'test/*.js' | tap-spec"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.10.2",
+    "eventsource": "^1.1.0",
+    "node-fetch": "^3.0.0",
+    "nodemon": "^2.0.13",
+    "prettier-standard": "^16.4.1",
+    "standard": "^16.0.3",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.3.1",
+    "typescript": "^4.4.3"
+  }
+}

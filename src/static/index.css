@@ -1,0 +1,67 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeeeee;
+  color: #111111;
+}
+
+.page-wrapper {
+  box-sizing: border-box;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages-wrapper {
+  flex: 1;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.scrollable {
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.scrollable * {
+  overflow-anchor: none;
+}
+.scrollable .anchor {
+  overflow-anchor: auto;
+  height: 1px;
+}
+#messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 100%;
+}
+.message {
+  margin: 0;
+  padding: 0.25rem 0;
+  min-height: min-content;
+}
+
+#input-form {
+  width: 100%;
+}
+#input-form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  border-radius: 0.2rem;
+  border: 1px solid #888;
+}
