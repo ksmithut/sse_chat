@@ -147,7 +147,6 @@ wsServer.on('connection', ws => {
   ws.on('message', () => {})
   ws.send('something')
 })
-
 server.listen(Number.parseInt(process.env.PORT ?? '3000'))
 ```
 
