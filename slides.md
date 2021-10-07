@@ -8,8 +8,15 @@ size: 102 x 29
 # Server-Sent Events
 
 <!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
 
-The relatively unknown alternative to WebSockets
+                                A simple alternative to WebSockets
 
 ---
 
@@ -25,14 +32,14 @@ The relatively unknown alternative to WebSockets
 <!-- -->
 <!-- -->
 
-> "Why isn't the document list showing the newly submitted documents?"
+> "Why isn't the data list showing the newly submitted information?"
 
 - D. Ziner, Product Manager
 
 <!-- -->
 <!-- -->
 
-> "Could we add a notification for when a new approval becomes available?"
+> "Could we add a notification for when a new update becomes available?"
 
 - CEO in a passing conversation
 
@@ -322,3 +329,16 @@ data: {"hello":"world"}
 ---
 
 ## Example
+
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+<!-- -->
+
+                              https://github.com/ksmithut/sse_chat
