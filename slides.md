@@ -1,11 +1,13 @@
 ---
 theme: ./theme.json
 author: Keith Smith
-paging: Server Sent Events
+paging: Server-Sent Events
 size: 102 x 29
 ---
 
 # Server-Sent Events
+
+<!-- -->
 
 The relatively unknown alternative to WebSockets
 
@@ -119,6 +121,33 @@ function connect () {
 
 ## What are ways to solve this?
 
+### Web-Sockets
+
+```js
+import http from 'node:http'
+import express from 'express'
+import { WebSocketServer } from 'ws'
+import authMiddleware from './middleware/auth.js'
+
+const app = express()
+const server = http.createServer(app)
+const wsServer = new WebSocketServer({ server })
+
+app.use(authMiddleware())
+// app.use(...)
+wsServer.on('connection', ws => {
+  // TODO:: Handle authentication
+  ws.on('message', () => {})
+  ws.send('something')
+})
+
+server.listen(Number.parseInt(process.env.PORT ?? '3000'))
+```
+
+---
+
+## What are ways to solve this?
+
 ### Server-Sent Events
 
 <!-- -->
@@ -143,7 +172,32 @@ eventSource.addEventListener('message', event => rerender(event.data))
 
 ---
 
-## Limitations of Server Sent Events
+## What are ways to solve this?
+
+### Server-Sent Events
+
+```js
+// import ...
+
+app.use(authMiddleware())
+app.get('/stream', (req, res) => {
+  res.writeHead(200, {
+    'Content-Type': 'text/event-stream',
+    Connection: 'keep-alive',
+    'Cache-Control': 'no-cache'
+  })
+  const interval = setInterval(() => {
+    res.write('data: something\n\n')
+  }, 1000)
+  res.on('close' => clearInterval(interval))
+})
+
+server.listen(Number.parseInt(process.env.PORT ?? '3000'))
+```
+
+---
+
+## Limitations of Server-Sent Events
 
 <!-- -->
 <!-- -->

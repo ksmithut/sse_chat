@@ -22,7 +22,10 @@ export function createSSEManager () {
       })
     },
     close () {
-      resSet.forEach((_, res) => res.end())
+      resSet.forEach(res => {
+        res.end()
+        res.req.destroy()
+      })
       resSet.clear()
     }
   }
