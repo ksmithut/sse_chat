@@ -337,7 +337,10 @@ data: {"hello":"world"}
 <!-- -->
 <!-- -->
 <!-- -->
-<!-- -->
-<!-- -->
 
                               https://github.com/ksmithut/sse_chat
+
+<!-- -->
+
+                               https://connectforce.herokuapp.com
+                            https://github.com/ksmithut/connectforce
